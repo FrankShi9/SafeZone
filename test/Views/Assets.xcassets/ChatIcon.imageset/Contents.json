@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "to+the+future+man+marty+marty+mcfly+mcfly+people+person+icon-1320085992404035772_32.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
