@@ -7,14 +7,23 @@
 
 import SwiftUI
 
-struct OffsetModifiers: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//Offset the scrollview
+
+struct OffsetModifier: ViewModifier {
+    
+    @Binding var offset: CGFloat
+    
+    func body(content: Content) -> some View {
+        content
+            .overlay(
+                GeometryReader{proxy -> Color in
+                    let minY = proxy.frame(in: .global)
+                    
+                    return Color.clear
+                    
+                }
+            
+            )
     }
 }
 
-struct OffsetModifiers_Previews: PreviewProvider {
-    static var previews: some View {
-        OffsetModifiers()
-    }
-}

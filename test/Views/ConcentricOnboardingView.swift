@@ -1,4 +1,6 @@
-//
+//开源库，来自github
+//实现欢迎页面切换动画
+
 //  ContentView.swift
 //  ConcentricOnboarding
 //
@@ -37,7 +39,7 @@ class ObservableInt: ObservableObject {
 }
 
 public struct ConcentricOnboardingView : View {
-
+    
     public var animationWillBegin = {}
     public var animationDidEnd = {}
     public var didGoToLastPage = {}
@@ -111,7 +113,9 @@ public struct ConcentricOnboardingView : View {
 
         currentIndex.didSet = {
             if self.currentIndex.value == self.pages.count - 1 {
+                shown.toggle() //change here
                 self.didGoToLastPage()
+                
             }
         }
     }

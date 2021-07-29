@@ -69,6 +69,13 @@ struct DetailView: View {
                         })
                         
                         HStack(spacing: 15){
+                            Button(action: {
+                                
+                            }, label: {
+                                Image(systemName: "eye.circle").font(.system(size: 45)).foregroundColor(.black).frame(width: UIScreen.main.bounds.width/1.2, height: 70, alignment: .topLeading)
+                            })
+                        }
+                        HStack(spacing: 15){
                             HStack(spacing: 15){
                                 TextField("Message", text: self.$message)
                                 Button(action: {
@@ -76,7 +83,7 @@ struct DetailView: View {
                                     imagePicker.toggle()
                                     
                                 }, label: {
-                                    Image(systemName: "paperclip.circle.fill").font(.system(size: 30)).foregroundColor(.white)
+                                    Image(systemName: "photo").font(.system(size: 25)).foregroundColor(.white)
                                 })
                             }
                             .padding(.vertical, 12)
@@ -244,7 +251,7 @@ class Messages : ObservableObject{
     
     //sample data...
     init (){
-        let 对方的话语库 = ["Are you SERIOUS??", "对话对象预设：我很生气",  "我们还是分开冷静一下吧", "对话对象预设：我看错你了"]
+        let 对方的话语库 = ["Are you SERIOUS??", "语境预设：我很生气",  "预设: 我们还是分开冷静一下吧", "预设：我看错你了"]
         for i in 1..<对方的话语库.count{
             //simple logic to decide a two-way chat
             messages.append(Message(id: Date(), message: 对方的话语库[i], myMsg: i % 2 == 0 ? true : false, profilePic: i % 2 != 0 ? "ChatObjectIcon" : "ChatIcon"))

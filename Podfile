@@ -9,8 +9,6 @@ target 'test' do
 
 pod 'MessageKit'
 pod 'JGProgressHUD'
-pod 'RealmSwift'
-pod 'SDWebImage'
-
+pod 'ConcentricOnboarding'
  
 end

@@ -16,7 +16,7 @@ struct OB_Content: View {
 
 
 //            Onboard()
-            Onboard()
+            test
             if (shown){
                 test.hidden()
                 ContentView(chats: ChatList.data)

@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import LocalAuthentication
+import UIKit
 
 struct ChatView: View {
 
@@ -37,6 +38,12 @@ struct ChatView: View {
 
 struct ContentView: View {
     @State private var isUnlocked = false
+    @State private var onBoard = true
+    
+//    @State var time : Date = Date()
+    
+    let chats: [ChatList]
+//    let timer = Timer.publish(every: 6.0, on: .main, in: .common).autoconnect()
     
     func auth(){
         let context = LAContext()
@@ -62,40 +69,61 @@ struct ContentView: View {
         }
     }
     
-    let chats: [ChatList]
- 
-    var body: some View {
     
-        TabView {
-            ChatView(chats: ChatList.data)
-                .tabItem{
-                    Image(systemName: "message")
-                    Text("Chat")
+    
+    var body: some View {
+        VStack{
+            
+            VStack{
+            }
+            .sheet(isPresented: ($onBoard)){
+                Onboard()
+            }
+            
+//            VStack{
+//            }.onReceive(timer, perform: {value in
+//                time = value
+//            })
+            
+            VStack{
+            }
+            .onAppear(perform: auth)
+            
+            if (self.isUnlocked){
+                TabView {
+                    ChatView(chats: ChatList.data)
+                        .tabItem{
+                            Image(systemName: "message")
+                            Text("Chat")
+                        }
+                        NavigationView{
+                            
+                            NavigationLink(destination: MeView()) {
+                                    MeView()
+                                        .ignoresSafeArea()
+                            }
+                            
+        //                    .navigationTitle("爱哭的我")
+        //                    .navigationBarItems(trailing: Button(action: {}){
+        //                        Image("ChatIcon")
+        //                            .resizable()
+        //                            .frame(width: 60, height: 60)
+        //                            .clipShape(Circle())
+        //                    })
+                        }
+                        .tabItem{
+                            Image(systemName: "person.circle")
+                            Text("Me")
+                        }
+                        
                 }
-                NavigationView{
-                    
-                    NavigationLink(destination: MeView()) {
-                        MeView()
-                    }
-                    .navigationTitle("爱哭的我")
-                    .navigationBarItems(trailing: Button(action: {}){
-                        Image("ChatIcon")
-                            .resizable()
-                            .frame(width: 60, height: 60)
-                            .clipShape(Circle())
-                    })
-                }
-                .tabItem{
-                    Image(systemName: "person.circle")
-                    Text("Me")
-                }
-                
+//                .onAppear(perform: auth)
+            }
         }
-        .onAppear(perform: auth)
-        
-        
+
     }
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {

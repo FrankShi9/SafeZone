@@ -24,6 +24,11 @@
 		01150C7526AF2FE9007B3AF3 /* Yes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150C7426AF2FE9007B3AF3 /* Yes.swift */; };
 		01150C7726AF2FF5007B3AF3 /* No.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150C7626AF2FF5007B3AF3 /* No.swift */; };
 		01150C7926AFD455007B3AF3 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150C7826AFD455007B3AF3 /* LockView.swift */; };
+		01150C9E26B132F1007B3AF3 /* OffsetModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150C9D26B132F1007B3AF3 /* OffsetModifiers.swift */; };
+		01150CA026B246E1007B3AF3 /* MeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150C9F26B246E1007B3AF3 /* MeMessage.swift */; };
+		01150CA226B262F1007B3AF3 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150CA126B262F1007B3AF3 /* Onboard.swift */; };
+		01150CA626B26544007B3AF3 /* ConcentricOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150CA526B26544007B3AF3 /* ConcentricOnboardingView.swift */; };
+		01150CAA26B313E2007B3AF3 /* OB_Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01150CA926B313E2007B3AF3 /* OB_Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		01150C7426AF2FE9007B3AF3 /* Yes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yes.swift; sourceTree = "<group>"; };
 		01150C7626AF2FF5007B3AF3 /* No.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = No.swift; sourceTree = "<group>"; };
 		01150C7826AFD455007B3AF3 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		01150C9D26B132F1007B3AF3 /* OffsetModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetModifiers.swift; sourceTree = "<group>"; };
+		01150C9F26B246E1007B3AF3 /* MeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeMessage.swift; sourceTree = "<group>"; };
+		01150CA126B262F1007B3AF3 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
+		01150CA526B26544007B3AF3 /* ConcentricOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcentricOnboardingView.swift; sourceTree = "<group>"; };
+		01150CA926B313E2007B3AF3 /* OB_Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OB_Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 		0112051326AC42FB00DDCD86 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				01150C9C26B132DE007B3AF3 /* Modifiers */,
 				01150C6826AEC1C7007B3AF3 /* Resources */,
 				01150C6726AEC1B8007B3AF3 /* ViewModels */,
 				01150C6626AEC1AB007B3AF3 /* Models */,
@@ -121,6 +132,9 @@
 				01150C7226AF2D7C007B3AF3 /* ReflectView.swift */,
 				01150C7426AF2FE9007B3AF3 /* Yes.swift */,
 				01150C7626AF2FF5007B3AF3 /* No.swift */,
+				01150CA526B26544007B3AF3 /* ConcentricOnboardingView.swift */,
+				01150CA126B262F1007B3AF3 /* Onboard.swift */,
+				01150CA926B313E2007B3AF3 /* OB_Content.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +142,7 @@
 		01150C6626AEC1AB007B3AF3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01150C9F26B246E1007B3AF3 /* MeMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +169,14 @@
 				01150C7826AFD455007B3AF3 /* LockView.swift */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		01150C9C26B132DE007B3AF3 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				01150C9D26B132F1007B3AF3 /* OffsetModifiers.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,16 +251,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				01150C6D26AEE666007B3AF3 /* NewConversationController.swift in Sources */,
+				01150CA626B26544007B3AF3 /* ConcentricOnboardingView.swift in Sources */,
 				0112055826ADCF0B00DDCD86 /* MeView.swift in Sources */,
 				0112051726AC42FB00DDCD86 /* ContentView.swift in Sources */,
 				01150C7526AF2FE9007B3AF3 /* Yes.swift in Sources */,
 				01150C7126AEEC5F007B3AF3 /* ViewController.swift in Sources */,
+				01150C9E26B132F1007B3AF3 /* OffsetModifiers.swift in Sources */,
+				01150CA026B246E1007B3AF3 /* MeMessage.swift in Sources */,
 				01150C6F26AEEC1E007B3AF3 /* OnboardingViewController.swift in Sources */,
 				0112052426AC5CE400DDCD86 /* ChatLIst.swift in Sources */,
 				0112052626AC5D1200DDCD86 /* CardView.swift in Sources */,
 				01150C7726AF2FF5007B3AF3 /* No.swift in Sources */,
+				01150CAA26B313E2007B3AF3 /* OB_Content.swift in Sources */,
 				0112052A26AC655000DDCD86 /* DetailView.swift in Sources */,
 				01150C7926AFD455007B3AF3 /* LockView.swift in Sources */,
+				01150CA226B262F1007B3AF3 /* Onboard.swift in Sources */,
 				01150C7326AF2D7C007B3AF3 /* ReflectView.swift in Sources */,
 				0112051526AC42FB00DDCD86 /* testApp.swift in Sources */,
 			);
