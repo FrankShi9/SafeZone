@@ -9,8 +9,9 @@ import SwiftUI
 
 
 struct NoView: View {
+//    let chats: [ChatList]
     var body: some View {
-        NavigationView{
+        
             
             VStack{
                 Text(" 不用着急，慢慢想。 回看一下当前对话")
@@ -21,8 +22,8 @@ struct NoView: View {
                     .multilineTextAlignment(.center)
                 
                 
-                HStack(spacing: 15){
-                    Button(action: {}, label: {
+                VStack(spacing: 15){
+                    NavigationLink(destination: DetailView(chat: ChatList.data[0]), label: {
                         Text("     OK     ").font(.system(size: 35)).foregroundColor(.white).frame(width: 160, height: 90, alignment: .center)
                     })
                 }
@@ -39,7 +40,7 @@ struct NoView: View {
 //                .foregroundColor(Color.blue)
 //                .padding()
 
-        }
+        
         
     }
 }

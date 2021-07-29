@@ -69,9 +69,9 @@ struct DetailView: View {
                         })
                         
                         HStack(spacing: 15){
-                            Button(action: {
-                                
-                            }, label: {
+                            NavigationLink(destination:
+                                ReflectView()
+                            , label: {
                                 Image(systemName: "eye.circle").font(.system(size: 45)).foregroundColor(.black).frame(width: UIScreen.main.bounds.width/1.2, height: 70, alignment: .topLeading)
                             })
                         }

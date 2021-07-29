@@ -10,7 +10,7 @@ import SwiftUI
 
 struct YesView: View {
     var body: some View {
-        NavigationView{
+        
             
             VStack{
                 Text("恭喜！安全区助你时刻保持冷静，此对话会被移动到已解决历史")
@@ -24,8 +24,8 @@ struct YesView: View {
                     .font(.title)
                     .padding(20)
                 
-                HStack(spacing: 15){
-                    Button(action: {}, label: {
+                VStack(spacing: 15){
+                    NavigationLink(destination: MeView(), label: {
                         Text("     OK     ").font(.system(size: 35)).foregroundColor(.white).frame(width: 160, height: 90, alignment: .center)
                     })
                 }
@@ -42,7 +42,7 @@ struct YesView: View {
 //                .foregroundColor(Color.blue)
 //                .padding()
 
-        }
+        
         
     }
 }

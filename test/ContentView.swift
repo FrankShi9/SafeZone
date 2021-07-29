@@ -25,7 +25,7 @@ struct ChatView: View {
                 }
             }
             .navigationTitle("全部缓冲区")
-            .padding(.all)
+            .padding()
             .navigationBarItems(trailing: Button(action: {}){
                 Image(systemName: "plus")
             
